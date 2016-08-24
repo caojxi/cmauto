@@ -12,11 +12,13 @@
 </template>
 
 <script>
-  import { login } from 'vx/actions'
+  import { auth } from 'vx/actions'
 
   export default {
     vuex: {
-      actions: { login }
+      actions: {
+        login: auth.login
+      }
     },
 
     data() {

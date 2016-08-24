@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import { VALIDATE_FORM, SET_CURRENT_USER } from './mutatin-types'
+import { VALIDATE_FORM, SET_CURRENT_USER } from './mutation-types'
 
 Vue.use(Vuex)
 
@@ -20,7 +20,12 @@ const mutations = {
   }
 }
 
+import clients from './modules/clients'
+
 export default new Vuex.Store({
   state,
-  mutations
+  mutations,
+  modules: {
+    clients
+  }
 })
