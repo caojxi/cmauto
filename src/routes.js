@@ -6,6 +6,12 @@ export function configRouter(router) {
       subRoutes: {
 
         // auth pages
+        '/auth': {
+          component: require('./pages/auth/template'),
+          subRoutes: {
+            '/': { component: require('./pages/auth/login'), name: 'auth.login' }
+          }
+        },
 
         // admin pages
         '/admin': {
