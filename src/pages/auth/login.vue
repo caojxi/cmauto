@@ -1,24 +1,32 @@
 <template>
   <div id="fullscreen_bg" class="fullscreen_bg">
-
     <div class="container">
-
       <form class="form-signin">
         <h1 class="form-signin-heading text-muted">CMAUTO</h1>
-        <input type="text" class="form-control" placeholder="Email address" required="" autofocus="">
-        <input type="password" class="form-control" placeholder="Password" required="">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">
-          LOGIN
-        </button>
+        <input v-model="user.email" type="text" class="form-control" placeholder="Email address" required="" autofocus="">
+        <input v-model="user.password" type="password" class="form-control" placeholder="Password" required="">
+        <button class="btn btn-lg btn-primary btn-block" type="submit" @click.prevent="login(user)">LOGIN</button>
       </form>
-
     </div>
   </div>
 </template>
 
 <script>
-  export default {
+  import { login } from 'vx/actions'
 
+  export default {
+    vuex: {
+      actions: { login }
+    },
+
+    data() {
+      return {
+        user: {
+          email: '',
+          password: ''
+        }
+      }
+    }
   }
 </script>
 

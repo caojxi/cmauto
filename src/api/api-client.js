@@ -2,7 +2,7 @@ import $ from 'jquery'
 require('bootstrap-notify')
 
 export const api = process.env.NODE_ENV !== 'production'
-  ? 'http://api.cmauto.local/'
+  ? 'http://cmauto.app:8000/'
   : 'http://api.cmauto.codium.com.au/'
 
 const rest = require('rest')

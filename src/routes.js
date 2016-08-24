@@ -18,7 +18,7 @@ export function configRouter(router) {
           auth: true,
           component: require('./pages/template'),
           subRoutes: {
-            '/': { component: require('./pages/services/create'), name: 'admin.index' }
+            '/': { component: require('./pages/services/create'), name: 'admin' }
           }
         }
       }
