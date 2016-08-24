@@ -20,6 +20,15 @@ export function configRouter(router) {
           subRoutes: {
             '/': { component: require('./pages/services/create'), name: 'admin' }
           }
+        },
+
+        // client pages
+        '/clients': {
+          auth: true,
+          component: require('./pages/template'),
+          subRoutes: {
+            '/': { component: require('./pages/clients/index'), name: 'clients' }
+          }
         }
       }
     }

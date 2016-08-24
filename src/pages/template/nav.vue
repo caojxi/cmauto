@@ -15,9 +15,9 @@
 
       <ul class="nav">
         <li>
-          <a href="dashboard.html">
-            <i class="ti-panel"></i>
-            <p>Dashboard</p>
+          <a v-link="{ name: 'clients' }">
+            <i class="ti-user"></i>
+            <p>Clients</p>
           </a>
         </li>
         <li>

@@ -8,6 +8,10 @@ require('es6-promise').polyfill()
 window.$ = window.jQuery = require('jquery')
 window.bootstrap = require('bootstrap')
 
+// setup components
+import installComponents from './components/index'
+installComponents(Vue)
+
 Vue.use(VueRouter)
 // create router
 export const router = new VueRouter({
