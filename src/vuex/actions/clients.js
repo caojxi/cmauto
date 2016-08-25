@@ -1,10 +1,14 @@
-import clients from 'api/clients'
+import * as api from 'api/base'
 import * as types from './../mutation-types'
 
-export const getAllClients = ({ dispatch }) => {
-  clients.all(
+const path = 'api/clients'
+
+export const all = ({ dispatch }) => {
+  api.all(
+    path,
+    {},
     clients => {
-      dispatch(types.GET_CLIENTS, clients)
+      dispatch(types.GET_CLIENTS, clients.entity.data)
     },
     () => {}
   )

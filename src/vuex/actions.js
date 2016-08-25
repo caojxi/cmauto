@@ -1,7 +1,7 @@
 import * as auth from './actions/auth'
-import * as clients from './actions/clients'
+import * as ClientApi from './actions/clients'
 
 export {
   auth,
-  clients
+  ClientApi
 }
