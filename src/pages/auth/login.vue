@@ -68,7 +68,7 @@
     max-width: 280px;
     padding: 15px;
     margin: 0 auto;
-    margin-top:250px;
+    margin-top:150px;
   }
   .form-signin .form-signin-heading, .form-signin {
     margin-bottom: 10px;

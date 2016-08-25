@@ -3,7 +3,7 @@ require('bootstrap-notify')
 
 export const api = process.env.NODE_ENV !== 'production'
   ? 'http://cmauto.app:8000/'
-  : 'http://api.cmauto.codium.com.au/'
+  : 'http://cmauto.herokuapp.com/'
 
 const rest = require('rest')
 const mime = require('rest/interceptor/mime')
